@@ -8,6 +8,13 @@
       "when": 1756882789251,
       "tag": "0000_special_nitro",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1756895781002,
+      "tag": "0001_solid_baron_strucker",
+      "breakpoints": true
     }
   ]
 }
