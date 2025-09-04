@@ -2,8 +2,10 @@ import { z } from 'zod';
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
-  NEXT_PUBLIC_APP_URL: z.string().url({ message: 'Must be a valid URL' }).optional(),
+  NEXT_PUBLIC_APP_URL: z.string(),
   DATABASE_URL: z.string('missing database URL'),
+  GIT_CLIENT_ID: z.string('missing GitHub client ID'),
+  GIT_CLIENT_SECRET: z.string('missing GitHub client secret'),
 });
 
 function validateEnv() {
@@ -31,6 +33,7 @@ function validateEnv() {
 }
 
 export const env = validateEnv();
+
 export type Env = z.infer<typeof envSchema>;
 export const getEnv = () => env;
 export const isDev = env.NODE_ENV === 'development';
