@@ -22,6 +22,7 @@ export default antfu({
   },
 }, {
   rules: {
+    'no-console': 'off',
     'style/jsx-max-props-per-line': ['error', { maximum: 1 }],
     'antfu/no-top-level-await': 'off', // Allow top-level await
     'style/brace-style': ['error', '1tbs'], // Use the default brace style

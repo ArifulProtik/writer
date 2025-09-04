@@ -1,4 +1,3 @@
-import type { Metadata, Viewport } from 'next';
 import { Geist_Mono, Inter, Lora } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
@@ -23,22 +22,6 @@ const geistMono = Geist_Mono({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: 'Medium Blog - Beautiful Typography & Dark Mode',
-  description: 'A Medium-inspired blog application with beautiful typography using Inter and Lora fonts, featuring seamless dark mode switching and accessibility-focused design.',
-  keywords: ['blog', 'medium', 'typography', 'dark mode', 'next.js', 'tailwind'],
-  authors: [{ name: 'Your Name' }],
-};
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,7 +42,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange={true}
           storageKey="medium-blog-theme"
