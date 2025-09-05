@@ -1,10 +1,12 @@
 'use client';
-import Link from 'next/link';
+
 import React from 'react';
 import { authClient } from '@/lib/auth-client';
 import AuthModalBtn from '../shared/auth-modal-btn';
 import { Skeleton } from '../ui/skeleton';
 import MainAuthenticatedMenu from './main-authinticated-menu';
+import { SquarePen } from 'lucide-react';
+import Link from 'next/link';
 
 function MainHeader() {
   const { data: session, isPending } = authClient.useSession();
@@ -22,7 +24,11 @@ function MainHeader() {
         )}
 
         {!isPending && session && (
-          <div className="flex">
+          <div className="flex items-center gap-4">
+            <Link href={"/write"} className='text-muted-foreground font-semibold flex items-center gap-1.5'>
+              <SquarePen />
+              Write
+            </Link>
             <MainAuthenticatedMenu user={session.user} />
           </div>
         )}

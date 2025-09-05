@@ -1,7 +1,11 @@
 'use client';
 
 import { useTheme as useNextTheme } from 'next-themes';
-import { useCallback, useEffect, useState } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
 
 export function useTheme() {
   const nextTheme = useNextTheme();

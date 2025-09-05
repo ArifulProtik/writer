@@ -24,6 +24,13 @@ export default antfu({
   rules: {
     'no-console': 'off',
     'style/jsx-max-props-per-line': ['error', { maximum: 1 }],
+    'style/object-curly-newline': [
+      'error',
+      {
+        ImportDeclaration: { multiline: true, maximum: 3 },
+        ExportDeclaration: { multiline: true, minimum: 3 },
+      },
+    ],
     'antfu/no-top-level-await': 'off', // Allow top-level await
     'style/brace-style': ['error', '1tbs'], // Use the default brace style
     'ts/consistent-type-definitions': ['error', 'type'], // Use `type` instead of `interface`

@@ -1,6 +1,11 @@
 'use client';
 
-import { env, getAppUrl, isDev, isProd } from '@/lib/env';
+import {
+  env,
+  getAppUrl,
+  isDev,
+  isProd,
+} from '@/lib/env';
 
 export function EnvExample() {
   return (

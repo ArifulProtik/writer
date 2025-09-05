@@ -1,7 +1,10 @@
-import { Geist_Mono, Inter, Lora } from 'next/font/google';
+import {
+  Geist_Mono,
+  Inter,
+  Lora,
+} from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
-// Validate environment variables on app startup
 import '@/lib/env';
 
 const inter = Inter({

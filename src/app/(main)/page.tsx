@@ -6,7 +6,9 @@ export const metadata: Metadata = {
 };
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <>
+      home
+    </>
   );
 }
 
